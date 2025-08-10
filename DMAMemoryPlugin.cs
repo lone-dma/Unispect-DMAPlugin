@@ -1,7 +1,10 @@
 ﻿using System;
 using System.IO;
+using System.Runtime.Versioning;
 using Unispect;
-using Vmmsharp;
+using VmmSharpEx;
+
+[assembly: SupportedOSPlatform("Windows")]
 
 namespace unispectDMAPlugin
 {
@@ -54,7 +57,7 @@ namespace unispectDMAPlugin
                 Log.Add($"[DMA] Attaching to process '{handle}'");
                 // Slightly differs from Unispect's default Memory Plugin.
                 // Use 'ProcessName.exe' instead of 'ProcessName'.
-                if (_vmm.Process(handle) is not VmmProcess proc)
+                if (_vmm.GetProcessByName(handle) is not VmmProcess proc)
                     throw new Exception("Process not found!");
                 _proc = proc;
                 return true;
