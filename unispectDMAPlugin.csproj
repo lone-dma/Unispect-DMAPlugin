@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net9.0</TargetFramework>
+    <TargetFramework>net9.0-windows</TargetFramework>
     <AssemblyTitle>unispectDMAPlugin</AssemblyTitle>
     <Product>unispectDMAPlugin</Product>
     <Copyright>Copyright ©  2022</Copyright>
@@ -16,7 +16,7 @@
   </PropertyGroup>
 	
   <ItemGroup>
-    <PackageReference Include="VmmSharpEx" Version="1.0.5" />
+    <PackageReference Include="VmmSharpEx" Version="2.0.9356.1201" />
   </ItemGroup>
 	
   <ItemGroup>
